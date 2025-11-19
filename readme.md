@@ -67,4 +67,4 @@ This repository documents my intense 6-week Data Structures & Algorithms sprint.
 - **Focus:** Clean Code, Readable Variable Names, Edge Case Handling
 
 ---
-*Created by [Your Name]*
+*Created by Parjad Minooei*
