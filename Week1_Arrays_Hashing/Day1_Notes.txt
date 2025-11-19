@@ -1,0 +1,34 @@
+DAY 1: ARRAYS & HASHING
+Date: Nov 19, 2025
+
+1. KEY CONCEPTS
+   - HashMaps/Sets are the key to O(n) time complexity.
+   - Trade-off: We use O(n) extra space (memory) to save time (avoiding nested loops).
+   - Sets are great for: Removing duplicates, O(1) lookups.
+   - Maps are great for: Counting frequencies (Valid Anagram, Top K Frequent).
+
+2. PYTHON SYNTAX CHEAT SHEET
+   - Dictionary default value: 
+     count[x] = count.get(x, 0) + 1
+   - Sorting a string as a Key: 
+     key = "".join(sorted(word))
+   - Checking intersection: 
+     set1.intersection(set2) is O(n), checking "x in list" is O(n*m).
+   - Sorting a dict by value: 
+     sorted(my_dict.items(), key=lambda x: x[1], reverse=True)
+
+3. PROBLEM PATTERNS
+   - "Contains Duplicate": Use a Set to fail fast.
+   - "Two Sum": Use a Complement Map (target - num).
+   - "Group Anagrams": The Key is the sorted string.
+   - "Product Except Self": 
+     * Trick: You need the product of everything to the LEFT and everything to the RIGHT.
+     * Use two arrays (prefix/postfix) or two passes.
+
+4. MISTAKES TO AVOID
+   - Don't use .index() or "x in list" inside a loop -> turns O(n) into O(n^2).
+   - Don't sort inside a loop if you can avoid it.
+
+5. REVIEW LIST (Come back to these)
+   - Longest Consecutive Sequence (Shelved - Logic was tricky).
+   - Product Array Except Self (Need to memorize the Left/Right pass logic).
