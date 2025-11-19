@@ -1,0 +1,20 @@
+# Problem: Longest Consecutive Sequence
+# Difficulty: Medium
+# Time Complexity: O(N)
+# Space Complexity: O(N)
+class Solution:
+    def longestConsecutive(self, nums: List[int]) -> int:
+        numSet = set(nums)
+        longest = 0
+
+        for num in numSet:
+            # Check if 'num' is the start of a sequence
+            if (num - 1) not in numSet:
+                length = 0
+                # Keep checking the next number: num, num+1, num+2...
+                while (num + length) in numSet:
+                    length += 1
+                
+                longest = max(longest, length)
+                
+        return longest
