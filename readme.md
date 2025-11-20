@@ -16,7 +16,7 @@ This repository documents my intense 6-week Data Structures & Algorithms sprint.
 
 ### ✅ Week 1: The Foundation (Arrays, Hashing, Pointers)
 - [x] **Day 1:** Arrays & Hashing (HashMaps, Sets, Prefix Sums)
-- [ ] **Day 2:** String Manipulation & Anagrams
+- [x] **Day 2:** String Manipulation & Anagrams
 - [ ] **Day 3:** Two Pointers (3Sum, Container With Most Water)
 - [ ] **Day 4:** Sliding Window (Fixed vs Variable)
 

@@ -1,0 +1,40 @@
+DAY 2: TWO POINTERS & SLIDING WINDOW
+Date: Nov 20, 2025
+
+1. THE TWO POINTERS PATTERN
+   - When to use: Searching for pairs in a sorted array, or checking palindromes.
+   - Strategy: 
+     * Start pointers at edges (L=0, R=end).
+     * Move inwards based on logic (Sum too big? Decrement R. Sum too small? Increment L).
+   - Complexity: Reduces O(n^2) to O(n).
+
+2. SLIDING WINDOW PATTERN
+   - When to use: Substring/Subarray problems (Longest..., Smallest..., Sum of k...).
+   - Formula (The "Caterpillar"):
+     1. Expand 'r' (Add to window).
+     2. Check Validity (Loop `while invalid`).
+     3. Shrink 'l' (Remove from window to make it valid again).
+     4. Update Result (usually max(res, r-l+1)).
+
+3. PROBLEM SPECIFIC TRICKS
+   - "Valid Palindrome": Use .isalnum() to skip non-letters. Compare s[i].lower() == s[j].lower().
+   - "3Sum": 
+     * SORT the array first! 
+     * Loop `k` through array. Then solve Two Sum on the rest.
+     * CRITICAL: Skip duplicates to avoid same answers (while nums[l] == nums[l-1]).
+   - "Container With Most Water": 
+     * Greedy approach. Start wide. 
+     * Always move the pointer of the SHORTER wall (hoping for a taller one).
+   - "Longest Repeating Char Replacement":
+     * Validity Check: (WindowLength - MaxFreq) <= k.
+     * If > k, shrink window.
+
+4. THE "HARD" ONE: TRAPPING RAIN WATER
+   - Logic: Water at index `i` is determined by the bottleneck of the tallest walls to its left and right.
+   - Formula: min(max_left[i], max_right[i]) - height[i].
+   - Optimization: Pre-compute max_left and max_right arrays so you don't re-scan.
+
+5. PYTHON SYNTAX
+   - Infinity: float('inf')
+   - Char check: char.isalnum()
+   - Remove from set: myset.remove(val)
